@@ -7,9 +7,9 @@ import java.sql.SQLException;
 public class DbConnector {
     private static Connection connection;
 
-    private static final String DB_URL = "jdbc:postgresql://127.0.0.1:5432/school_db";
-    private static final String USER = "postgres";
-    private static final String PASS = "postgres";
+    private static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/school_db?useUnicode=true&serverTimezone=UTC";
+    private static final String USER = "root";
+    private static final String PASS = "root";
 
     static {
         try {

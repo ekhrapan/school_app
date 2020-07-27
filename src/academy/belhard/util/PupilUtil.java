@@ -15,10 +15,8 @@ public class PupilUtil {
         String lastName = resultSet.getString("last_name");
         int age = resultSet.getInt("age");
         String email = resultSet.getString("email");
-        Date createdAt = resultSet.getDate("created_at");
-        Date updatedAt = resultSet.getDate("updated_at");
         int schoolId = resultSet.getInt("school_id");
 
-        return new Pupil(id, firstName, lastName, age, email, createdAt, updatedAt, schoolId);
+        return new Pupil(id, firstName, lastName, age, email, schoolId);
     }
 }

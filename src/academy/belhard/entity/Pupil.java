@@ -1,29 +1,23 @@
 package academy.belhard.entity;
 
-import java.util.Date;
-
 public class Pupil {
     private int id;
     private String firstName;
     private String lastName;
     private int age;
     private String email;
-    private Date createdAt;
-    private Date updatedAt;
     private int schoolId;
 
-    public Pupil(int id, String firstName, String lastName, int age, String email, Date createdAt, Date updatedAt, int schoolId) {
+    public Pupil(int id, String firstName, String lastName, int age, String email, int schoolId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.email = email;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
         this.schoolId = schoolId;
     }
 
-    public Pupil(String firstName, String lastName, int age, String email, String genderType, int schoolId) {
+    public Pupil(String firstName, String lastName, int age, String email, int schoolId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -71,22 +65,6 @@ public class Pupil {
         this.email = email;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
     public int getSchoolId() {
         return schoolId;
     }
@@ -95,8 +73,8 @@ public class Pupil {
         this.schoolId = schoolId;
     }
 
-    public static Pupil createItemForSaving(String firstName, String lastName, int age, String email, String genderType, int schoolId) {
-        return new Pupil(firstName, lastName, age, email, genderType, schoolId);
+    public static Pupil createItemForSaving(String firstName, String lastName, int age, String email, int schoolId) {
+        return new Pupil(firstName, lastName, age, email, schoolId);
     }
 
     @Override
@@ -107,8 +85,6 @@ public class Pupil {
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +
                 ", email='" + email + '\'' +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
                 ", schoolId=" + schoolId +
                 '}';
     }

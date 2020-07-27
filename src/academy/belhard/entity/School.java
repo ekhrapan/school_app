@@ -6,15 +6,11 @@ public class School {
     private int id;
     private String title;
     private String city;
-    private Date createdAt;
-    private Date updatedAt;
 
-    public School(int id, String title, String city, Date createdAt, Date updatedAt) {
+    public School(int id, String title, String city) {
         this.id = id;
         this.title = title;
         this.city = city;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
     }
 
     private School(String title, String city) {
@@ -46,22 +42,6 @@ public class School {
         this.city = city;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
     public static School createItemForSaving(String title, String city) {
         return new School(title, city);
     }
@@ -72,8 +52,6 @@ public class School {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", city='" + city + '\'' +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
                 '}';
     }
 }

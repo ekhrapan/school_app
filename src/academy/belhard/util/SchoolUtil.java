@@ -12,9 +12,7 @@ public class SchoolUtil {
         int id = resultSet.getInt("id");
         String title = resultSet.getString("title");
         String city = resultSet.getString("city");
-        Date createdAt = resultSet.getDate("created_at");
-        Date updatedAt = resultSet.getDate("updated_at");
 
-        return new School(id, title, city, createdAt, updatedAt);
+        return new School(id, title, city);
     }
 }
